@@ -1,0 +1,105 @@
+.presentacion{
+    height: 60vh;
+    background-image: url(/img/impresion3d.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    p{
+        font-weight: 700;
+    }
+        }
+
+@mixin titulo-productos{
+    background-color: $color-principal;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+@mixin imagen-productos {
+    padding: 5vh 0;
+    width: 50%;
+}
+.impresoras3d{
+    margin-top: 10vh;
+    &__titulo{
+        @include titulo-productos;
+        }
+    &__imagen{
+       @include imagen-productos;
+        }
+}  
+.multifuncion{
+    margin-top: 10vh;
+    &__titulo{
+        @include titulo-productos;
+    }
+    &__imagen{
+        @include imagen-productos;
+        }
+}
+.digitalizacion{
+    margin-top: 10vh;
+    &__titulo{
+        @include titulo-productos;
+        }
+    &__imagen{
+        @include imagen-productos;
+        }
+}
+
+// -------------RESPONSIVE 768PX---------
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .presentacion p {
+      font-size: 1.3rem;
+    }
+    .impresoras3d__titulo {
+      font-size: 2rem;
+      font-weight: 800;
+      height: 12vh;
+    }
+    .multifuncion__titulo {
+      font-size: 2rem;
+      font-weight: 800;
+      height: 12vh;
+    }
+    .digitalizacion__titulo {
+      font-size: 2rem;
+      font-weight: 800;
+      height: 12vh;
+    }
+}
+
+// --------RESPONSIVE DESKTOP--------
+
+@media (min-width: 1024px){
+    #contenedor-productos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 500px;
+
+        grid-template-areas: 
+        "impresoras3d multifuncion digitalizacion";
+    }
+
+.impresoras3d {
+    grid-area: impresoras3d;
+    width: 90%;
+}
+.multifuncion {
+    grid-area: multifuncion;
+    width: 90%;
+}
+.digitalizacion {
+    grid-area: digitalizacion;
+    width: 90%;
+}
+
+}

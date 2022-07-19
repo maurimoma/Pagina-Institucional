@@ -1,0 +1,153 @@
+.porque{
+    padding: 5%;
+    &__apertura--titulo {
+        color: $color-principal;
+        font-size: 8rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__apertura--subtitulo{
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    &__apertura--texto {
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    &__item1 {
+        padding-top: 15vh;
+    }
+    &__contenedorimagen--imagen {
+        width: 50%;
+        padding-top: 5vh;
+    }
+}
+
+%item-titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-bottom: 2vh
+}
+
+.porque__item1--titulo{
+    @extend %item-titulo;
+}
+.porque__item2--titulo{
+    @extend %item-titulo;
+}
+.porque__item3--titulo{
+    @extend %item-titulo;
+}
+
+%item-texto {
+    font-size: 1,1rem;
+    color: grey;
+    padding-bottom: 4vh;
+}
+
+.porque__item1--texto{
+    @extend %item-texto;
+}
+.porque__item2--texto{
+    @extend %item-texto;
+}
+.porque__item3--texto{
+    @extend %item-texto;
+}
+
+
+// -------------RESPONSIVE 768PX---------
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .porque{
+        &__apertura--texto {
+            font-size: 1.3rem;
+       }
+    }
+
+    %item-titulo-responsive {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-bottom: 2vh
+    }
+    
+    .porque__item1--titulo{
+        @extend %item-titulo-responsive;
+    }
+    .porque__item2--titulo{
+        @extend %item-titulo-responsive;
+    }
+    .porque__item3--titulo{
+        @extend %item-titulo-responsive;
+    }
+    
+    %item-texto-responsive {
+        font-size: 1.3rem;
+        color: grey;
+        padding-bottom: 4vh;
+    }
+    
+    .porque__item1--texto{
+        @extend %item-texto-responsive;
+    }
+    .porque__item2--texto{
+        @extend %item-texto-responsive;
+    }
+    .porque__item3--texto{
+        @extend %item-texto-responsive;
+    }
+    
+}
+
+// --------RESPONSIVE DESKTOP--------
+
+@media (min-width: 1024px){
+    .porque{
+        &apertura--titulo{
+            font-size: 12rem;
+        }
+        &__apertura--texto {
+            font-size: 2rem;
+       }
+       &__contenedorimagen--imagen{
+        width: 45%;
+        padding-top: 10vh;
+       }
+    }
+
+    %item-titulo-desktop {
+        font-size: 2rem;
+        font-weight: 600;
+        padding-bottom: 2vh
+    }
+    
+    .porque__item1--titulo{
+        @extend %item-titulo-desktop;
+    }
+    .porque__item2--titulo{
+        @extend %item-titulo-desktop;
+    }
+    .porque__item3--titulo{
+        @extend %item-titulo-desktop;
+    }
+    
+    %item-texto-desktop {
+        font-size: 1.4rem;
+        color: grey;
+        padding-bottom: 4vh;
+    }
+    
+    .porque__item1--texto{
+        @extend %item-texto-desktop;
+    }
+    .porque__item2--texto{
+        @extend %item-texto-desktop;
+    }
+    .porque__item3--texto{
+        @extend %item-texto-desktop;
+    }
+    
+}

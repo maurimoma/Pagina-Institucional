@@ -738,6 +738,7 @@ html {
 }
 .porque {
   padding: 5%;
+  margin-top: 15vh;
 }
 .porque__apertura--titulo {
   color: #20BFEA;

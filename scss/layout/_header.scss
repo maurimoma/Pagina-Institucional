@@ -1,63 +1,17 @@
-// ---------------MOBILE-----------------
+    .header{
+        margin-bottom: 30vh;
+    }
+    .header__img{
+        width: 15vw;
+    }
+    .navbar .navbar-nav .nav-link:hover{
+        color: $color-principal;
+        border-bottom: 2px solid $color-principal
+    }
 
-header{
-    display: flex;
-    padding: 4% 5%;
-    align-items: center;
-        img{
-            width: 45%;
-        }
-        nav ul{
-            display: flex;
-            list-style-type: none;
-            column-gap: 2vw;
-                li{font-weight: 700;
-                    font-size: 1.1rem;
-                    &:hover{
-                        border-bottom: 2px #20BFEA solid;
-                        transition-duration: 0.1s;
-                    }
-                    a{
-                        text-decoration: none;
-                    }
-                    }
-                }
-        }
-
-
-
-// -------------RESPONSIVE 768PX---------
-
-@media (min-width: 768px) and (max-width: 1023px){
-
-
-}
-
-
-
-// ----------RESPONSIVE DESKTOP----------
 
 @media (min-width: 1023px) {
-
-header{
-    display: flex;
-    padding: 2% 5%;
-    align-items: center;
-        img{
-            width: 15%;
-        }
-        nav ul{
-            display: flex;
-            list-style-type: none;
-            column-gap: 2vw;
-                li{font-weight: 700;
-                    font-size: 1.1rem;
-                    &:hover{
-                        border-bottom: 2px #20BFEA solid;}
-                    a{
-                        text-decoration: none;
-                    }
-                    }
-                }
-        }
+    .header__img{
+        width: 10vw;
+    }
 }

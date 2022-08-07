@@ -1,0 +1,99 @@
+%boton-servicios {
+    background-color: #FA5BB4;
+    color: white;
+    font-weight: 800;
+    padding: 13px 65px;
+    text-decoration: none;
+    margin: 5vh 0;
+    font-size: 0.9rem;
+    &:hover{
+        background-color: black;
+        color: white;
+        transition-duration: 1s;
+    }
+    
+}
+
+.servicios__digitalizacion--boton {
+    @extend %boton-servicios;
+}
+.servicios__service--boton {
+    @extend %boton-servicios;
+}
+.servicios__alquiler--boton {
+    @extend %boton-servicios;
+}
+.productos__3d--boton {
+    @extend %boton-servicios;
+}
+.productos__multifuncion--boton {
+    @extend %boton-servicios;
+}
+.productos__repuestos--boton {
+    @extend %boton-servicios;
+}
+
+// ----------- RESPONSIVE 768PX ---------
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    %boton-servicios {
+            background-color: #FA5BB4;
+            color: white;
+            font-weight: 800;
+            padding: 13px 65px;
+            text-decoration: none;
+            margin: 5vh 0;
+        }
+}
+.servicios__digitalizacion--boton {
+    @extend %boton-servicios;
+    }
+.servicios__service--boton {
+    @extend %boton-servicios;
+    }
+.servicios__alquiler--boton {
+    @extend %boton-servicios;
+    }
+.productos__3d--boton {
+    @extend %boton-servicios;
+    }
+.productos__multifuncion--boton {
+    @extend %boton-servicios;
+    }
+.productos__repuestos--boton {
+    @extend %boton-servicios;
+}
+    
+
+
+// ------- RESPONSIVE DESKTOP ----------
+
+@media (min-width: 1024px){
+%boton-servicios {
+        background-color: #FA5BB4;
+        color: white;
+        font-weight: 800;
+        padding: 13px 60px;
+        text-decoration: none;
+        margin: 5vh 0;
+        
+    }
+    .servicios__digitalizacion--boton {
+        @extend %boton-servicios;
+    }
+    .servicios__service--boton {
+        @extend %boton-servicios;
+    }
+    .servicios__alquiler--boton {
+        @extend %boton-servicios;
+    }
+    .productos__3d--boton {
+        @extend %boton-servicios;
+    }
+    .productos__multifuncion--boton {
+        @extend %boton-servicios;
+    }
+    .productos__repuestos--boton {
+        @extend %boton-servicios;
+    }
+}

@@ -10,41 +10,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- LINKEO ICONOS REDES SOCIALES DE BOOTRSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <!-- LINKEO HOJA DE ESTILO -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="../img/logo.png" alt="Logo SC"></a>
-        <nav>
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./productos.html">PRODUCTOS</a></li>
-                <li><a href="./nosotros.html">NOSOTROS</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li> 
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="presentacion">
-            <p class="presentacion__texto">IMPRESORAS QUE LE DAN VIDA A TUS IDEAS</p>
-        </section>
-        <div id="contenedor-productos">
-            <section class="impresoras3d">
-                <h2 class="impresoras3d__titulo">IMPRESORAS 3D</h2>
-                <img src="../img/ender_51.jpg" class="impresoras3d__imagen" alt="Impresora 3d Ender">
-            </section>
-            <section class="multifuncion">
-                <h2 class="multifuncion__titulo">MULTIFUNCIÓN</h2>
-                <img src="../img/impresora.jpg" class="multifuncion__imagen" alt="Impresora Multifunción">
-            </section>
-            <section class="digitalizacion">
-                <h2 class="digitalizacion__titulo">DIGITALIZACIÓN</h2>
-                <img src="../img/digitalizacion.jpg" class="digitalizacion__imagen" alt="Scanner para ">
-            </section>
+    <header class="navbar fixed-top navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html"><img src="/img/logo.png" alt="Logo SC" class="header__img"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" aria-current="page" href="/index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fs-5 fw-bold" href="productos.html">PRODUCTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="nosotros.html">NOSOTROS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="contacto.html">CONTACTO</a>
+              </li>
+             </ul>
+          </nav>
         </div>
+      </header>
+    <main>
+        <section class="productos">
+            <section class="productos__encabezado">
+                <h3 class="productos__encabezado--titulo">01</h3>
+                <h4 class="productos__encabezado--subtitulo">PRODUCTOS</h4>
+                <p class="productos__encabezado--texto">Tenemos lo último en tecnología de impresión y digitalización. ¡Pasá y conocelo!</p>
+            </section>
+            <section class="productos__3d">
+                <img src="/img/impresora3d.jpg" alt="Impresora 3d" class="productos__3d--imagen">
+                <h5 class="productos__3d--titulo">Impresoras 3D</h5>
+                <a href="./3d.html" class="productos__3d--boton">VER MÁS</a>
+            </section>
+            <section class="productos__multifuncion">
+                <img src="../img/multifuncion.jpg" alt="Impresora 3d" class="productos__multifuncion--imagen">
+                <h5 class="productos__multifuncion--titulo">Multifunción</h5>
+                <a href="./multifuncion.html" class="productos__multifuncion--boton">VER MÁS</a>
+            </section>
+            <section class="productos__repuestos">
+                <img src="../img/repuesto.jpg" alt="Repuesto de impresora" class="productos__repuestos--imagen">
+                <h5 class="productos__repuestos--titulo">Insumos y repuestos</h5>
+                <a href="./insumos.html" class="productos__repuestos--boton">VER MÁS</a>
+            </section>
+        </section>
+        <section class="newsletter">
+            <h3 class="newsletter__titulo">NEWSLETTER</h3>
+            <p class="newsletter__texto">Suscribite a nuestras novedades</p>
+            <form class="newsletter__formulario">
+              <label for="campo-mail"></label>
+              <input type="email" id="campo-nombre" placeholder="Escribí tu mail">
+              <button type="submit" class="newsletter__formulario--boton">SUSCRIBIRSE</button>
+            </form>
+           </section>
     </main>
     <footer>
         <div class="footer">
@@ -55,15 +81,20 @@
             <i class="bi-youtube"></i>
           </div>
           <div class="footer__menu">
-            <h3>PRODUCTOS</h3>
+            <h3>PRODUCTOS Y SERVICIOS</h3>
             <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./productos.html">PRODUCTOS</a></li>
-                <li><a href="./nosotros.html">NOSOTROS</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>  
+                <li><a href="./3d.html">Impresoras 3D</a></li>
+                <li><a href="./multifuncion.html">Multifunción</a></li>
+                <li><a href="./insumos.html">Insumos y repuestos</a></li>
+                <li><a href="./digitalizacion.html">Digitalización</a></li>
+                <li><a href="./serviciotecnico.html">Servicio técnico</a></li>
+                <li><a href="./alquiler.html">Alquiler de equipos</a></li>
             </ul>
+            <hr class="footer__hr">
+            <p class="footer__creditos">Copyright SC - 2022</p>
           </div>     
         </div>
     </footer>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

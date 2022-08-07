@@ -1,0 +1,163 @@
+@mixin intro-secciones{
+    background-image: url(/img/intro-multifuncion.jpg);
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+
+@mixin intro-secciones-titulo{
+    color: white;
+    font-weight: 900;
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FA5BB4;
+}
+
+.intro-multifuncion {
+    @include intro-secciones;
+    &__titulo{
+        @include intro-secciones-titulo;
+    }
+}
+
+
+@mixin tresd-info {
+    padding-top: 10vh;
+    padding-left: 5vw;
+}
+
+@mixin tresd-info-titulo{
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 4vh;
+}
+
+@mixin tresd-info-parrafo {
+    font-size: 1.1rem;
+    color: grey;
+    margin-bottom: 3vh;
+}
+
+@mixin tresd-info-imgprincipal{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin tresd-info-imgprincipalimg{
+    width: 70%;
+    padding-top: 7vh;
+    padding-bottom: 3vh;
+}
+
+@mixin tresd-info-galeria{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+}
+
+@mixin tresd-info-galeriaimg {
+    width: 15vw;
+}
+
+.multifuncion-info{
+    @include tresd-info;
+    &__titulo{
+        @include tresd-info-titulo;
+    }
+    &__p1{
+        @include tresd-info-parrafo;
+    }
+    &__p2{
+        @include tresd-info-parrafo;
+    }
+    &__p3{
+        @include tresd-info-parrafo;
+    }
+    &__imgprincipal{
+        @include tresd-info-imgprincipal;
+    }
+    &__imgprincipalimg{
+        @include tresd-info-imgprincipalimg;
+    }
+    &__galeria{
+        @include tresd-info-galeria;
+        &--img{
+            @include tresd-info-galeriaimg;
+        }
+    }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+@mixin intro-secciones{
+    background-image: url(/img/intro-multifuncion.jpg);
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+    
+@mixin intro-secciones-titulo{
+    color: white;
+    font-weight: 900;
+    font-size: 2.4rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FA5BB4;
+}
+    
+.intro-multifuncion {
+    @include intro-secciones;
+    &__titulo{
+        @include intro-secciones-titulo;
+    }
+}
+
+}
+
+
+@media (min-width: 1024px){
+
+@mixin intro-secciones{
+    background-image: url(/img/intro-multifuncion.jpg);
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10vh;
+    margin-top: 20vh;
+    }
+        
+@mixin intro-secciones-titulo{
+    color: white;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 2px #FA5BB4;
+    }
+        
+.intro-multifuncion {
+    @include intro-secciones;
+    &__titulo{
+        @include intro-secciones-titulo;
+        }
+    }
+    
+@mixin tresd-info {
+    padding-top: 10vh;
+    padding-left: 10vw;
+    }
+
+.multifuncion-info{
+    @include tresd-info;
+    }
+}

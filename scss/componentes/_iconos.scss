@@ -1,0 +1,17 @@
+%iconos-nosotros {
+    color: $color-principal;
+    font-size: 1.9rem;
+}
+
+.bi-printer {
+    @extend %iconos-nosotros;
+}
+.bi-cash-coin {
+    @extend %iconos-nosotros;
+}
+.bi-lightbulb {
+    @extend %iconos-nosotros;
+}
+.bi-truck {
+    @extend %iconos-nosotros;
+}

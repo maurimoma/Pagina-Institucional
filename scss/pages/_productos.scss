@@ -1,105 +1,256 @@
-.presentacion{
-    height: 60vh;
-    background-image: url(/img/impresion3d.jpg);
+
+
+.productos{
+    padding: 5%;
+    margin-top: 15vh;
+    &__encabezado--titulo {
+        color: $color-principal;
+        font-size: 8rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__encabezado--subtitulo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    &__encabezado--texto {
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+        text-align: center;
+    }
+    &__3d {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen {
+            width: 80%;
+            padding-top: 5vh;
+        }
+        &--titulo {
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+        &__multifuncion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--imagen {
+                width: 80%;
+                padding-top: 5vh;
+            }
+            &--titulo {
+                font-size: 1.2rem;
+                font-weight: 900;
+            }
+        }
+        &__repuestos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--imagen {
+                width: 80%;
+                padding-top: 5vh;
+            }
+            &--titulo {
+                font-size: 1.2rem;
+                font-weight: 900;
+            }
+        }
+}
+.productos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 230px 380px 400px;
+    
+    grid-template-areas: 
+    "productos__encabezado productos__encabezado"
+    "productos__3d productos__multifuncion"
+    "productos__repuestos .";
+}
+.productos__encabezado {
+    grid-area: productos__encabezado;
+}
+.productos__3d {
+    grid-area: productos__3d;
+}
+.productos__multifuncion {
+    grid-area: productos__multifuncion;
+}
+.productos__repuestos {
+    grid-area: productos__repuestos;
+}
+
+.newsletter {
+    background-image: url(/img/newsletter.jpg);
     background-size: cover;
-    display: flex;
+    background-position: top;
+    &__titulo{
+        color: white;
+        padding-top: 17vh;
+        padding-left: 2vw;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    &__texto {
+        color: black;
+        padding-top: 2vh;
+        padding-left: 2vw;
+        font-size: 1.3rem;
+    }
+    &__formulario{
+        padding-bottom: 8vh;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2vw;
+        &--boton{
+            padding: 4vw 3vh;
+            background-color: $color-principal;
+            color: white;
+            font-weight: 800;
+            border: none;
+            width: 40vw;
+        }
+    }
+}
+#campo-nombre{
+    width: 80vw;
     justify-content: center;
-    align-items: center;
-    color: white;
-    p{
-        font-weight: 700;
-    }
-        }
-
-@mixin titulo-productos{
-    background-color: $color-principal;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 700;
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
+    border: none;
+    padding: 2vh 0 2vh 2vw;
 }
-@mixin imagen-productos {
-    padding: 5vh 0;
-    width: 50%;
-}
-.impresoras3d{
-    margin-top: 10vh;
-    &__titulo{
-        @include titulo-productos;
-        }
-    &__imagen{
-       @include imagen-productos;
-        }
-}  
-.multifuncion{
-    margin-top: 10vh;
-    &__titulo{
-        @include titulo-productos;
-    }
-    &__imagen{
-        @include imagen-productos;
-        }
-}
-.digitalizacion{
-    margin-top: 10vh;
-    &__titulo{
-        @include titulo-productos;
-        }
-    &__imagen{
-        @include imagen-productos;
-        }
-}
-
-// -------------RESPONSIVE 768PX---------
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .presentacion p {
-      font-size: 1.3rem;
+        
+    .productos {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 350px 350px;
+    
+        grid-template-areas: 
+        "productos__encabezado productos__3d productos__multifuncion"
+        "productos__encabezado productos__repuestos .";
+        &__encabezado--titulo{
+            text-align: start;
+        }
+        &__encabezado--texto{
+            text-align: start;
+        }
+        &__3d--imagen{
+            width: 90%;
+        }
+        &__multifuncion--imagen{
+            width: 90%;
+        }
+        &__repuestos--imagen{
+            width: 90%;
+        }
     }
-    .impresoras3d__titulo {
-      font-size: 2rem;
-      font-weight: 800;
-      height: 12vh;
+    .productos__encabezado {
+        grid-area: productos__encabezado;
     }
-    .multifuncion__titulo {
-      font-size: 2rem;
-      font-weight: 800;
-      height: 12vh;
+    .productos__3d {
+        grid-area: productos__3d;
     }
-    .digitalizacion__titulo {
-      font-size: 2rem;
-      font-weight: 800;
-      height: 12vh;
+    .productos__multifuncion {
+        grid-area: productos__multifuncion;
+    }
+    .productos__repuestos {
+        grid-area: productos__repuestos;
+    }  
+      
+    .newsletter {
+        background-image: url(/img/newsletter.jpg);
+        background-size: cover;
+        background-position: top;
+        &__titulo{
+            color: white;
+            padding-top: 16vh;
+            padding-left: 4vw;
+            font-size: 2.8rem;
+            font-weight: 900;
+        }
+        &__texto {
+            color: black;
+            padding-top: 2vh;
+            padding-left: 4vw;
+            font-size: 1.3rem;
+        }
+        &__formulario{
+            padding-bottom: 8vh;
+            &--boton{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
     }
 }
-
-// --------RESPONSIVE DESKTOP--------
 
 @media (min-width: 1024px){
-    #contenedor-productos{
+    .productos {
+        margin-top: 20vh;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 500px;
+        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-rows: 450px;
 
         grid-template-areas: 
-        "impresoras3d multifuncion digitalizacion";
+        "productos__encabezado productos__3d productos__multifuncion productos__repuestos";
+    }
+    .productos__encabezado {
+        grid-area: productos__encabezado;
+        &--titulo {
+            text-align: start;
+        }
+        &--texto {
+            text-align: start;
+        }
+    }
+    .productos__3d {
+        grid-area: productos__3d;
+        &--imagen{
+            width: 90%;
+        }
+    }
+    .productos__multifuncion {
+        grid-area: productos__multifuncion;
+        &--imagen{
+            width: 90%;
+        }
+    }
+    .productos__repuestos {
+        grid-area: productos__repuestos;
+        &--imagen{
+            width: 90%;
+        }
     }
 
-.impresoras3d {
-    grid-area: impresoras3d;
-    width: 90%;
-}
-.multifuncion {
-    grid-area: multifuncion;
-    width: 90%;
-}
-.digitalizacion {
-    grid-area: digitalizacion;
-    width: 90%;
-}
-
+    .newsletter {
+        background-image: url(/img/newsletter.jpg);
+        background-size: cover;
+        background-position: top;
+        &__titulo{
+            color: white;
+            padding-top: 18vh;
+            padding-left: 6vw;
+            font-size: 2.8rem;
+            font-weight: 900;
+        }
+        &__texto {
+            color: black;
+            padding-top: 2vh;
+            padding-left: 6vw;
+            font-size: 1.3rem;
+        }
+        &__formulario{
+            padding-bottom: 8vh;
+            &--boton{
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+        }
+    }
 }

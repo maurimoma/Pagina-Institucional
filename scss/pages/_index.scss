@@ -1,0 +1,377 @@
+.inicio-apertura{
+    background-image: url(/img/inicio-apertura.jpg);
+    background-size: cover;   
+    margin-top: 20vh;
+    height: 80vh;
+    &__titulo{
+        text-align: center;
+        color: white;
+        font-weight: 800;
+        font-size: 1.2rem;
+        padding-top: 24vh;
+    }
+    &__texto{
+        text-align: center;
+        color: white;
+        padding-top: 4vh;
+        padding-bottom: 10vh;
+    }
+    &__contenedor{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+    &__boton1{
+        @extend %boton-servicios;
+        padding: 14px 40px;
+    }
+    &__boton2{
+        @extend %boton-servicios;
+        background-color: $color-principal;
+        padding: 14px 40px;
+    }
+}
+.productos{
+    padding: 5%;
+    margin-top: 15vh;
+    &__encabezado--titulo {
+        color: $color-principal;
+        font-size: 8rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__encabezado--subtitulo {
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    &__encabezado--texto {
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+        text-align: center;
+    }
+    &__3d {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen {
+            width: 80%;
+            padding-top: 5vh;
+        }
+        &--titulo {
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+        &__multifuncion {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--imagen {
+                width: 80%;
+                padding-top: 5vh;
+            }
+            &--titulo {
+                font-size: 1.2rem;
+                font-weight: 900;
+            }
+        }
+        &__repuestos {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &--imagen {
+                width: 80%;
+                padding-top: 5vh;
+            }
+            &--titulo {
+                font-size: 1.2rem;
+                font-weight: 900;
+            }
+        }
+}
+.productos {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 230px 380px 400px;
+    
+    grid-template-areas: 
+    "productos__encabezado productos__encabezado"
+    "productos__3d productos__multifuncion"
+    "productos__repuestos .";
+}
+.productos__encabezado {
+    grid-area: productos__encabezado;
+}
+.productos__3d {
+    grid-area: productos__3d;
+}
+.productos__multifuncion {
+    grid-area: productos__multifuncion;
+}
+.productos__repuestos {
+    grid-area: productos__repuestos;
+}
+
+.opiniones{
+    background-color: $color-principal;
+    padding: 12vh 0 4vh 2vh;
+    text-align: center;
+}
+
+%comillas{
+    font-size: 18rem;
+    color: rgba(80, 72, 83, 0.342);
+}
+
+.opiniones__contenedor1--comillas{
+    @extend %comillas;
+}
+.opiniones__contenedor2--comillas{
+    @extend %comillas;
+}
+.opiniones__contenedor3--comillas{
+    @extend %comillas;
+}
+
+%opiniones-texto{
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    top: -220px;
+    
+}
+
+.opiniones__contenedor1--texto{
+    @extend %opiniones-texto;
+}
+.opiniones__contenedor2--texto{
+    @extend %opiniones-texto;
+}
+.opiniones__contenedor3--texto{
+    @extend %opiniones-texto;
+}
+
+%opiniones-nombre{
+    color: #FA5BB4;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: -190px;
+}
+
+.opiniones__contenedor1--nombre{
+    @extend %opiniones-nombre;
+    
+}
+.opiniones__contenedor2--nombre{
+    @extend %opiniones-nombre;
+}
+.opiniones__contenedor3--nombre{
+    @extend %opiniones-nombre;
+}
+
+
+
+.servicios{
+    padding: 5%;
+    &__apertura--titulo {
+        color: $color-principal;
+        font-size: 8rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__apertura--subtitulo{
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    &__apertura--texto1{
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    &__apertura--texto2{
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    &__digitalizacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+       
+    }
+    &__service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+    &__alquiler{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .inicio-apertura{
+        height: 100vh;
+        &__titulo{
+            font-size: 2rem;
+            padding-top: 40vh;
+        }
+        &__texto{
+            padding-bottom: 6vh;
+        }
+        
+
+    }
+    .productos {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 350px 350px;
+    
+        grid-template-areas: 
+        "productos__encabezado productos__3d productos__multifuncion"
+        "productos__encabezado productos__repuestos .";
+        &__encabezado--titulo{
+            text-align: start;
+        }
+        &__encabezado--texto{
+            text-align: start;
+        }
+        &__3d--imagen{
+            width: 90%;
+        }
+        &__multifuncion--imagen{
+            width: 90%;
+        }
+        &__repuestos--imagen{
+            width: 90%;
+        }
+    }
+    .productos__encabezado {
+        grid-area: productos__encabezado;
+    }
+    .productos__3d {
+        grid-area: productos__3d;
+    }
+    .productos__multifuncion {
+        grid-area: productos__multifuncion;
+    }
+    .productos__repuestos {
+        grid-area: productos__repuestos;
+    }  
+
+    .servicios {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 350px 350px;
+    
+        grid-template-areas: 
+        "servicios__apertura servicios__digitalizacion servicios__service"
+        "servicios__apertura servicios__alquiler .";
+    }
+    .servicios__apertura{
+        grid-area: servicios__apertura;
+        &--titulo{
+            text-align: start;
+        }
+    }
+    
+    .servicios__digitalizacion{
+        grid-area: servicios__digitalizacion;
+    }
+    .servicios__service{
+        grid-area: servicios__service;
+    }
+    .servicios__alquiler{
+        grid-area: servicios__alquiler;
+    }
+    .servicios__digitalizacion--imagen{
+        width: 90%;
+    }
+    .servicios__service--imagen{
+        width: 90%;
+    }
+    .servicios__alquiler--imagen{
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px){
+    .inicio-apertura{
+        height: 100vh;
+        &__titulo{
+            font-size: 3rem;
+            padding-top: 40vh;
+        }
+        &__texto{
+            padding-bottom: 6vh;
+            font-size: 1.2rem;
+            padding-bottom: 4vh;
+        }
+    }
+    .productos {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-rows: 450px;
+
+        grid-template-areas: 
+        "productos__encabezado productos__3d productos__multifuncion productos__repuestos";
+    }
+    .productos__encabezado {
+        grid-area: productos__encabezado;
+        &--titulo {
+            text-align: start;
+        }
+        &--texto {
+            text-align: start;
+        }
+    }
+    .productos__3d {
+        grid-area: productos__3d;
+        &--imagen{
+            width: 90%;
+        }
+    }
+    .productos__multifuncion {
+        grid-area: productos__multifuncion;
+        &--imagen{
+            width: 90%;
+        }
+    }
+    .productos__repuestos {
+        grid-area: productos__repuestos;
+        &--imagen{
+            width: 90%;
+        }
+    }
+}

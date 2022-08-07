@@ -1,0 +1,57 @@
+.map-responsive{
+    margin-top: 20vh;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    display: flex;
+    justify-content: center;    
+    &iframe{
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}
+.contacto{
+    margin-top: 18vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    border-right: 10px #20BFEA solid;
+    border-bottom: 16px #20BFEA solid;
+    width: 90vw;
+    &__titulo{
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: black;
+        text-align: center;
+        padding-bottom: 8vh;
+    }
+}
+
+%campos-contacto{
+    background-color: rgb(240, 240, 240);
+    width: 80vw;
+    color: rgb(58, 58, 58);
+    border: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 2vw;
+    margin-bottom: 4vh;
+
+}
+#contacto-campo-nombre{
+    @extend %campos-contacto;
+}
+#contacto-campo-mail{
+    @extend %campos-contacto;
+}
+#contacto-campo-tel{
+    @extend %campos-contacto;
+}
+#contacto-campo-texto{
+    @extend %campos-contacto;
+}

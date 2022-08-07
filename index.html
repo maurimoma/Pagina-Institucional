@@ -5,49 +5,146 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lo último en Impresoras 3D para empresas y hogar. Envíos a todo el país.">
-    <title>SC - Lo últiomo en Impresoras 3D</title>
+    <title>SC - Lo último en Impresoras 3D</title>
     <meta name="description" content="Lo último en Impresoras 3D para empresas y hogar. Envíos a todo el país.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <!-- LINKEO ICONOS REDES SOCIALES DE BOOTRSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <!-- LINKEO HOJA DE ESTILO -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="../img/logo.png" alt="Logo SC"></a>
-        <nav>
-            <ul>
-                <li><a href="./index.html">INICIO</a></li>
-                <li><a href="./pages/productos.html">PRODUCTOS</a></li>
-                <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
-                <li><a href="./pages/contacto.html">CONTACTO</a></li>    
-            </ul>
-        </nav>
-    </header>
-    <main>
-       
-    </main>
-    <footer>
-        <div class="footer">
-          <div class="footer__iconos">
-            <h4 class="footer__iconos--titulo">Seguinos</h4>
-            <i class="bi-linkedin"></i>
-            <i class="bi-instagram"></i>
-            <i class="bi-youtube"></i>
-          </div>
-          <div class="footer__menu">
-            <h3>PRODUCTOS</h3>
-            <ul>
-                <li><a href="./index.html">INICIO</a></li>
-                <li><a href="./pages/productos.html">PRODUCTOS</a></li>
-                <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
-                <li><a href="./pages/contacto.html">CONTACTO</a></li>  
-            </ul>
-          </div>     
+    <header class="navbar fixed-top navbar-expand-lg bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html"><img src="./img/logo.png" alt="Logo SC" class="header__img"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active fs-5 fw-bold" aria-current="page" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="./pages/productos.html">PRODUCTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="./pages/nosotros.html">NOSOTROS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 fw-bold" href="./pages/contacto.html">CONTACTO</a>
+              </li>
+             </ul>
+          </nav>
         </div>
-    </footer>
-
+      </header>
+  <main>
+       <section class="inicio-apertura">
+        <h2 class="inicio-apertura__titulo" data-aos="fade-up">LE DAMOS VIDA A TUS IDEAS</h2>
+        <p class="inicio-apertura__texto" data-aos="fade-down">Hacer realidad tus proyectos ahora es tan fácil como llamarnos a nosotros. Vení a conocer lo último en el mundo de la impresión.</p>
+        <div class="inicio-apertura__contenedor">  
+          <a href="./pages/productos.html" class="inicio-apertura__boton1" data-aos="fade-right">VER PRODUCTOS</a>
+          <a href="./pages/nosotros.html" class="inicio-apertura__boton2" data-aos="fade-left">VER SERVICIOS</a>
+        </div>
+       </section>
+       <section class="productos">
+        <section class="productos__encabezado">
+            <h3 class="productos__encabezado--titulo" data-aos="zoom-in">01</h3>
+            <h4 class="productos__encabezado--subtitulo">PRODUCTOS</h4>
+            <p class="productos__encabezado--texto">Tenemos lo último en tecnología de impresión y digitalización. ¡Pasá y conocelo!</p>
+        </section>
+        <section class="productos__3d">
+            <img src="/img/impresora3d.jpg" alt="Impresora 3d" class="productos__3d--imagen">
+            <h5 class="productos__3d--titulo">Impresoras 3D</h5>
+            <a href="/pages/3d.html" class="productos__3d--boton">VER MÁS</a>
+        </section>
+        <section class="productos__multifuncion">
+            <img src="../img/multifuncion.jpg" alt="Impresora 3d" class="productos__multifuncion--imagen">
+            <h5 class="productos__multifuncion--titulo">Multifunción</h5>
+            <a href="/pages/multifuncion.html" class="productos__multifuncion--boton">VER MÁS</a>
+        </section>
+        <section class="productos__repuestos">
+            <img src="../img/repuesto.jpg" alt="Repuesto de impresora" class="productos__repuestos--imagen">
+            <h5 class="productos__repuestos--titulo">Insumos y repuestos</h5>
+            <a href="/pages/insumos.html" class="productos__repuestos--boton">VER MÁS</a>
+        </section>
+      </section>
+      <section class="opiniones">
+        <div class="opiniones__contenedor1">
+        <h3 class="opiniones__contenedor1--comillas">"</h3>
+        <p class="opiniones__contenedor1--texto" data-aos="fade-up">Trabajamos junto a SC desde hace más de 20 años. Gracias a ellos nos hemos ido modernizando a la par de las nuevas tecnologías</p>
+        <p class="opiniones__contenedor1--nombre">ECOTERMO</p>
+        </div>
+        <div class="opiniones__contenedor2">
+          <h3 class="opiniones__contenedor2--comillas">"</h3>
+          <p class="opiniones__contenedor2--texto" data-aos="fade-up">Hace un mes compramos a SC una impresora 3d para nuestro colegio. No sólo nos sorprendió el producto, sino la atención de SC: dejaron todo listo para que quede funcionando.</p>
+          <p class="opiniones__contenedor2--nombre">COLEGIO DIVINA PROVIDENCIA</p>
+          </div>
+          <div class="opiniones__contenedor3">
+            <h3 class="opiniones__contenedor3--comillas">"</h3>
+            <p class="opiniones__contenedor3--texto" data-aos="fade-up">En la empresa teníamos pilas de papeles por todos lados. Optamos por digitalizar nuestros documentos más importantes y estamos tan satisfechos que vamos a empezar a hacerlo con todos nuestros documentos.</p>
+            <p class="opiniones__contenedor2--nombre">MUNICIPALIDAD LAS HERAS</p>
+            </div>
+      </section>
+      <section class="servicios">
+        <section class="servicios__apertura">
+            <h3 class="servicios__apertura--titulo" data-aos="zoom-in">02</h3>
+            <h4 class="servicios__apertura--subtitulo">NUESTROS SERVICIOS</h4>
+            <p class="servicios__apertura--texto1">Desde el primer contacto, somos un aliado que te acompaña en cada etapa.</p>
+            <p class="servicios__apertura--texto2">Conocé el servicio que hace la diferencia.</p>
+        </section>
+        <section class="servicios__digitalizacion">
+            <img src="../img/digitalizacion.jpg" alt="Digitalizacion de documentos" class="servicios__digitalizacion--imagen">
+            <h5 class="servicios__digitalizacion--titulo">
+                Digitalización
+            </h5>
+            <a href="/pages/digitalizacion.html" class="servicios__digitalizacion--boton">VER MÁS</a>
+        </section>
+        <section class="servicios__service">
+            <img src="../img/service.jpg" alt="Servicio técnico de impresoras y fotocopiadoras" class="servicios__service--imagen">
+            <h5 class="servicios__service--titulo">
+                Servicio Técnico
+            </h5>
+            <a href="/pages/serviciotecnico.html" class="servicios__service--boton">VER MÁS</a>
+        </section>
+        <section class="servicios__alquiler">
+            <img src="../img/alquiler.jpg" alt="Alquiler de impresoras y fotocopiadoras" class="servicios__alquiler--imagen">
+            <h5 class="servicios__alquiler--titulo">
+                Alquiler de equipos
+            </h5>
+            <a href="/pages/alquiler.html" class="servicios__alquiler--boton">VER MÁS</a>
+        </section>
+      </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="footer__iconos">
+        <h4 class="footer__iconos--titulo">Seguinos</h4>
+          <i class="bi-linkedin"></i>
+          <i class="bi-instagram"></i>
+          <i class="bi-youtube"></i>
+      </div>
+      <div class="footer__menu">
+        <h3>PRODUCTOS Y SERVICIOS</h3>
+        <ul>
+          <li><a href="/pages/3d.html">Impresoras 3D</a></li>
+          <li><a href="./pages/multifuncion.html">Multifunción</a></li>
+          <li><a href="./pages/insumos.html">Insumos y repuestos</a></li>
+          <li><a href="./pages/digitalizacion.html">Digitalización</a></li>
+          <li><a href="./pages/serviciotecnico.html">Servicio técnico</a></li>
+          <li><a href="./pages/alquiler.html">Alquiler de equipos</a></li>
+        </ul>
+        <hr class="footer__hr">
+          <p class="footer__creditos">Copyright SC - 2022</p>
+      </div>     
+    </div>
+  </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

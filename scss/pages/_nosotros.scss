@@ -15,20 +15,27 @@
         color: grey;
         font-size: 1.1rem;
         margin-top: 2vh;
+        text-align: center;
     }
     &__item1 {
         padding-top: 15vh;
     }
-    &__contenedorimagen--imagen {
-        width: 50%;
+    &__contenedorimagen{
         padding-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--imagen{
+            width: 70%;
+        }
     }
+
 }
 
 %item-titulo {
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding-bottom: 2vh
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 2vh;
 }
 
 .porque__item1--titulo{
@@ -40,11 +47,15 @@
 .porque__item3--titulo{
     @extend %item-titulo;
 }
+.porque__item4--titulo{
+    @extend %item-titulo;
+}
 
 %item-texto {
     font-size: 1,1rem;
     color: grey;
     padding-bottom: 4vh;
+    width: 100%;
 }
 
 .porque__item1--texto{
@@ -56,15 +67,191 @@
 .porque__item3--texto{
     @extend %item-texto;
 }
+.porque__item4--texto{
+    @extend %item-texto;
+}
+.porque__item1{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8vh 15vh;
 
+    grid-template-areas: 
+    "bi-printer porque__item1--titulo"
+    "porque__item1--texto porque__item1--texto";
+}
 
-// -------------RESPONSIVE 768PX---------
+.bi-printer{
+    grid-area: bi-printer;
+}
+
+.porque__item1--titulo{
+    grid-area: porque__item1--titulo;
+}
+
+.porque__item1--texto{
+    grid-area: porque__item1--texto;
+}
+
+.porque__item1{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8vh 15vh;
+
+    grid-template-areas: 
+    "bi-printer porque__item1--titulo"
+    "porque__item1--texto porque__item1--texto";
+}
+
+.bi-printer{
+    grid-area: bi-printer;
+}
+
+.porque__item1--titulo{
+    grid-area: porque__item1--titulo;
+}
+
+.porque__item1--texto{
+    grid-area: porque__item1--texto;
+}
+
+.porque__item2{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8vh 15vh;
+
+    grid-template-areas: 
+    "bi-cash-coin porque__item2--titulo"
+    "porque__item2--texto porque__item2--texto";
+}
+
+.bi-cash-coin{
+    grid-area: bi-cash-coin;
+}
+
+.porque__item2--titulo{
+    grid-area: porque__item2--titulo;
+}
+
+.porque__item2--texto{
+    grid-area: porque__item2--texto;
+}
+
+.porque__item3{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8vh 15vh;
+
+    grid-template-areas: 
+    "bi-lightbulb porque__item3--titulo"
+    "porque__item3--texto porque__item3--texto";
+}
+
+.bi-lightbulb{
+    grid-area: bi-lightbulb;
+}
+
+.porque__item3--titulo{
+    grid-area: porque__item3--titulo;
+}
+
+.porque__item3--texto{
+    grid-area: porque__item3--texto;
+}
+
+.porque__item4{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 8vh 15vh;
+
+    grid-template-areas: 
+    "bi-truck porque__item4--titulo"
+    "porque__item4--texto porque__item4--texto";
+}
+
+.bi-truck{
+    grid-area: bi-truck;
+}
+
+.porque__item4--titulo{
+    grid-area: porque__item4--titulo;
+}
+
+.porque__item4--texto{
+    grid-area: porque__item4--texto;
+}
+
+.servicios{
+    padding: 5%;
+    &__apertura--titulo {
+        color: $color-principal;
+        font-size: 8rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    &__apertura--subtitulo{
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    &__apertura--texto1{
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    &__apertura--texto2{
+        color: grey;
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    &__digitalizacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+       
+    }
+    &__service{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+    &__alquiler{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--imagen{
+            width: 50%;
+            padding-top: 5vh;
+        }
+        &--titulo{
+            font-size: 1.2rem;
+            font-weight: 900;
+        }
+    }
+}
+
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .porque{
         &__apertura--texto {
             font-size: 1.3rem;
+            text-align: center;
        }
     }
 
@@ -83,6 +270,9 @@
     .porque__item3--titulo{
         @extend %item-titulo-responsive;
     }
+    .porque__item4--titulo{
+        @extend %item-titulo-responsive;
+    }
     
     %item-texto-responsive {
         font-size: 1.3rem;
@@ -99,27 +289,117 @@
     .porque__item3--texto{
         @extend %item-texto-responsive;
     }
+    .porque__item4--texto{
+        @extend %item-texto-responsive;
+    }
+
+    .porque__contenedoritems{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 430px 220px 220px;
+
+        grid-template-areas: 
+        "porque__contenedorimagen porque__contenedorimagen"
+        "porque__item1 porque__item2"
+        "porque__item3 porque__item4";
+    }
     
+    .porque__contenedorimagen{
+        grid-area: porque__contenedorimagen;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--imagen{
+            width: 50%;
+        }
+    }
+
+    %porque-item{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .porque__item1{
+        grid-area: porque__item1;
+        @extend %porque-item
+    }
+    .porque__item2{
+        grid-area: porque__item2;
+        padding-top: 15vh;
+        @extend %porque-item
+    }
+    .porque__item3{
+        grid-area: porque__item3;
+        @extend %porque-item
+    }
+    .porque__item4{
+        grid-area: porque__item4;
+        @extend %porque-item
+    }
+    .servicios {
+        display: grid;
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 350px 350px;
+    
+        grid-template-areas: 
+        "servicios__apertura servicios__digitalizacion servicios__service"
+        "servicios__apertura servicios__alquiler .";
+    }
+    .servicios__apertura{
+        grid-area: servicios__apertura;
+        &--titulo{
+            text-align: start;
+        }
+    }
+    
+    .servicios__digitalizacion{
+        grid-area: servicios__digitalizacion;
+    }
+    .servicios__service{
+        grid-area: servicios__service;
+    }
+    .servicios__alquiler{
+        grid-area: servicios__alquiler;
+    }
+    .servicios__digitalizacion--imagen{
+        width: 90%;
+    }
+    .servicios__service--imagen{
+        width: 90%;
+    }
+    .servicios__alquiler--imagen{
+        width: 90%;
+    }
+
 }
 
-// --------RESPONSIVE DESKTOP--------
+
+
 
 @media (min-width: 1024px){
     .porque{
-        &apertura--titulo{
-            font-size: 12rem;
+        margin-top: 20vh;
+        &__apertura--titulo{
+            font-size: 8rem;
         }
         &__apertura--texto {
-            font-size: 2rem;
+            font-size: 1.5rem;
+            text-align: center;
+            padding-bottom: 5vh;
        }
        &__contenedorimagen--imagen{
-        width: 45%;
+        width: 100%;
         padding-top: 10vh;
        }
     }
 
+    
     %item-titulo-desktop {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
         padding-bottom: 2vh
     }
@@ -133,9 +413,12 @@
     .porque__item3--titulo{
         @extend %item-titulo-desktop;
     }
+    .porque__item4--titulo{
+        @extend %item-titulo-desktop;
+    }
     
     %item-texto-desktop {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: grey;
         padding-bottom: 4vh;
     }
@@ -149,5 +432,70 @@
     .porque__item3--texto{
         @extend %item-texto-desktop;
     }
+    .porque__item4--texto{
+        @extend %item-texto-desktop;
+    }
+
+
+    .porque__contenedoritems{
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 300px 300px;
+
+        grid-template-areas: 
+        "porque__item1 porque__contenedorimagen porque__item2"
+        "porque__item3 porque__contenedorimagen porque__item4";
+    }
+
+    .porque__item1{
+        grid-area: porque__item1;
+    }
+    .porque__contenedorimagen{
+        grid-area: porque__contenedorimagen;
+    }
+    .porque__item2{
+        grid-area: porque__item2;
+        padding-top: 15vh;
+    }
+    .porque__item3{
+        grid-area: porque__item3;
+    }
+    .porque__item4{
+        grid-area: porque__item4;
+    }
+    .servicios {
+        display: grid;
+        grid-template-columns: 40% 20% 20% 20%;
+        grid-template-rows: 450px;
     
+        grid-template-areas: 
+        "servicios__apertura servicios__digitalizacion servicios__service servicios__alquiler";
+    }
+    .servicios__apertura{
+        grid-area: servicios__apertura;
+        &--titulo{
+            text-align: start;
+        }
+    }
+    
+    .servicios__digitalizacion{
+        grid-area: servicios__digitalizacion;
+    }
+    .servicios__service{
+        grid-area: servicios__service;
+    }
+    .servicios__alquiler{
+        grid-area: servicios__alquiler;
+    }
+    .servicios__digitalizacion--imagen{
+        width: 90%;
+    }
+    .servicios__service--imagen{
+        width: 90%;
+    }
+    .servicios__alquiler--imagen{
+        width: 90%;
+    }
+
 }
+

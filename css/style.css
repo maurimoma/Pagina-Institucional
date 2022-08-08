@@ -106,6 +106,24 @@
   font-weight: 100;
   font-size: 0.8rem;
 }
+.footer .bi-linkedin {
+  color: white;
+}
+.footer .bi-linkedin:hover {
+  color: #20BFEA;
+}
+.footer .bi-instagram {
+  color: white;
+}
+.footer .bi-instagram:hover {
+  color: #20BFEA;
+}
+.footer .bi-youtube {
+  color: white;
+}
+.footer .bi-youtube:hover {
+  color: #20BFEA;
+}
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer__iconos {

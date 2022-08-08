@@ -12,7 +12,7 @@
             color: white;
             font-size: 1rem;
             font-weight: 400;
-        }
+        }   
     }
     &__menu{
         margin-top: 8%;
@@ -40,6 +40,25 @@
         font-weight: 100;
         font-size: 0.8rem;
     }
+    .bi-linkedin{
+        color: white;
+        &:hover{
+            color: $color-principal;
+        }
+    }
+    .bi-instagram{
+        color: white;
+        &:hover{
+            color: $color-principal;
+        }
+    }
+    .bi-youtube{
+        color: white;
+        &:hover{
+            color: $color-principal;
+        }
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -79,6 +98,7 @@
             &--titulo{
                 font-size: 1.7rem;
             }
+            
         }
         .footer__menu {
             grid-area: footer__menu;
@@ -90,6 +110,7 @@
             li {
                 font-size: 1.3rem;
                 font-weight: 700;
+                
             }
         }
     }
